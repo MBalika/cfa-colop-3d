@@ -370,7 +370,7 @@ function update(t) {
   else if (t >= T.extract[1]) concTop = 0.3;
   if (t >= 142) concTop = lerp(0.3, -PILE.cutoff, ease(ramp(t, 142, 149)));
   state.concTop = concTop; concClip.constant = concTop;
-  sfClip2.constant = (t >= 62.5 && t < T.extract[1]) ? -concTop : 1000; // a betonfej alatt a menetek betonban vannak
+  sfClip2.constant = 1000; // a betonfej alatt a menetek betonban vannak
   concTopCap.visible = concTop > -PILE.L && concTop < 0.3; concTopCap.position.y = concTop;
   overpour.visible = t >= 100 && t < 142;
   // beton az üreges szárban és a talpnál (közelkép)
