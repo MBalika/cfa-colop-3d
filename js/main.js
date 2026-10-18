@@ -245,8 +245,7 @@ $('endcard').innerHTML = `<h2>CFA cölöp – összefoglaló</h2><div class="col
 <li>6–22 (24) m hossz</li>
 <li>egyszerű gépészet, béléscső és zagy nélkül</li>
 <li>automata monitorozás (nyomás, mennyiség, mélység)</li>
-<li>gyors fúrási sebesség</li></ul></div></div>
-<div class="src">Forrás: Alapozás előadás – Mélyalapozások, CFA (37–43. dia)</div>`;
+<li>gyors fúrási sebesség</li></ul></div></div>`;
 document.querySelectorAll('#endcard li').forEach(li => li.innerHTML = typo(li.innerHTML));
 
 // ---------- állapot ----------
