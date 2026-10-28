@@ -23,14 +23,20 @@ function setHTML(el, html) { if (el.__last !== html) { el.innerHTML = html; el._
 let HY = null, lastT = 0;
 function hy(html) { if (!HY) return html; return html.split(/(<[^>]+>)/).map((p) => (p.startsWith('<') ? p : p.replace(/[\p{L}\u00AD]{6,}/gu, (w) => (w.includes('\u00AD') ? w : HY(w).replace(/\u200B/g, ''))))).join(''); }
 // sorkizárt panel: ha keskeny sorban túl nagy lyuk maradna, balra zárt
-function ragFit(el) {
-  el.classList.remove('rag'); const cs = getComputedStyle(el); if (cs.textAlign !== 'justify') return;
-  const fs = parseFloat(cs.fontSize); const all = document.createRange(); all.selectNodeContents(el); const rs = all.getClientRects(); if (rs.length < 2) return;
-  const lastTop = Math.max(...Array.from(rs).map((r) => r.top)); let big = 0, mid = 0;
+function ragHoley(el) {
+  const cs = getComputedStyle(el); const fs = parseFloat(cs.fontSize); const all = document.createRange(); all.selectNodeContents(el); const rs = all.getClientRects(); if (rs.length < 2) return false;
+  let lastTop = -1e9; for (const r of rs) if (r.width && r.top > lastTop) lastTop = r.top; let big = 0, mid = 0;
   const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let n;
-  while ((n = w.nextNode())) { const t = n.nodeValue; for (let i = 0; i < t.length; i++) { if (t[i] !== ' ') continue; const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + 1); const b = r.getBoundingClientRect(); if (!b.width || b.top >= lastTop - 2) continue; if (b.width > fs * 1.15) big++; else if (b.width > fs * 0.9) mid++; } }
-  if (big || mid >= 2) el.classList.add('rag');
+  while ((n = w.nextNode())) { const t = n.nodeValue; for (let i = 0; i < t.length; i++) { if (t[i] !== ' ' && t[i] !== '\u00A0') continue; const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + 1); const b = r.getBoundingClientRect(); if (!b.width || b.top >= lastTop - 2) continue; if (b.width > fs * 1.15) big++; else if (b.width > fs * 0.9) mid++; } }
+  return big > 0 || mid >= 2;
 }
+// sorkizárt panel: ha lyukas, előbb sima tördelés (text-wrap: wrap, sorkizárt marad), csak utána balra zárt (a panelekben nincs puha kötés)
+function ragFit(el) {
+  el.classList.remove('rag', 'twr'); if (getComputedStyle(el).textAlign !== 'justify') return;
+  if (!ragHoley(el)) return; el.classList.add('twr'); if (!ragHoley(el)) return;
+  el.classList.remove('twr'); el.classList.add('rag');
+}
+try { const st = document.createElement('style'); st.textContent = '.twr{text-wrap:wrap!important}'; document.head.appendChild(st); } catch (e) {}
 function setPanel(el, html) { const h = hy(html).trim(); if (el.__last !== h) { el.innerHTML = h; el.__last = h; ragFit(el); } }
 function setText(el, s) { if (el.__last !== s) { el.textContent = s; el.__last = s; } }
 
