@@ -19,6 +19,19 @@ function typo(s) {
     .replace(/([0-9A-Za-zÀ-ſ])([-–—])([0-9A-Za-zÀ-ſ])/g, '$1' + WJ + '$2' + WJ + '$3');
 }
 function setHTML(el, html) { if (el.__last !== html) { el.innerHTML = html; el.__last = html; } }
+// magyar elválasztás (Hyphenopoly, ha betöltődött): lágy kötőjel csak a címkéken kívüli, legalább 6 betűs szavakba (formázás skill 0. és 4. pont)
+let HY = null, lastT = 0;
+function hy(html) { if (!HY) return html; return html.split(/(<[^>]+>)/).map((p) => (p.startsWith('<') ? p : p.replace(/[\p{L}\u00AD]{6,}/gu, (w) => (w.includes('\u00AD') ? w : HY(w).replace(/\u200B/g, ''))))).join(''); }
+// sorkizárt panel: ha keskeny sorban túl nagy lyuk maradna, balra zárt
+function ragFit(el) {
+  el.classList.remove('rag'); const cs = getComputedStyle(el); if (cs.textAlign !== 'justify') return;
+  const fs = parseFloat(cs.fontSize); const all = document.createRange(); all.selectNodeContents(el); const rs = all.getClientRects(); if (rs.length < 2) return;
+  const lastTop = Math.max(...Array.from(rs).map((r) => r.top)); let big = 0, mid = 0;
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) { const t = n.nodeValue; for (let i = 0; i < t.length; i++) { if (t[i] !== ' ') continue; const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + 1); const b = r.getBoundingClientRect(); if (!b.width || b.top >= lastTop - 2) continue; if (b.width > fs * 1.15) big++; else if (b.width > fs * 0.9) mid++; } }
+  if (big || mid >= 2) el.classList.add('rag');
+}
+function setPanel(el, html) { const h = hy(html).trim(); if (el.__last !== h) { el.innerHTML = h; el.__last = h; ragFit(el); } }
 function setText(el, s) { if (el.__last !== s) { el.textContent = s; el.__last = s; } }
 
 // ---------- paraméterek ----------
@@ -481,10 +494,10 @@ function update(t) {
   let active = -1; PHASES.forEach((p, i) => { const el = $('tab_' + p.key); const st = t >= p.t[1] ? 'done' : (t >= p.t[0] ? 'active' : ''); if (st === 'active') active = i; el.className = 'tab ' + st; });
   const cap = CAPTIONS.find(c => t >= c.t[0] && t < c.t[1]);
   const capEl = $('caption'); capEl.style.opacity = cap ? String(Math.min(1, ramp(t, cap.t[0], cap.t[0] + 0.5)) * (1 - ramp(t, cap.t[1] - 0.5, cap.t[1]) * (CAPTIONS.some(c2 => c2.t[0] === cap.t[1]) ? 0 : 1))) : '0';
-  if (cap) { setText($('capPh'), cap.ph); setHTML($('capTx'), typo(cap.tx)); }
+  if (cap) { setText($('capPh'), cap.ph); setPanel($('capTx'), typo(cap.tx)); }
   const card = CARDS.find(c => t >= c.t[0] && t < c.t[1]);
   const cardEl = $('card');
-  if (card) { const o = ease(ramp(t, card.t[0], card.t[0] + 0.7)) * (1 - ease(ramp(t, card.t[1] - 0.7, card.t[1]))); cardEl.style.opacity = String(o); cardEl.style.transform = `translateY(${(1 - o) * -10}px)`; setHTML($('cardT'), typo(card.title)); setHTML($('cardX'), typo(card.text)); }
+  if (card) { const o = ease(ramp(t, card.t[0], card.t[0] + 0.7)) * (1 - ease(ramp(t, card.t[1] - 0.7, card.t[1]))); cardEl.style.opacity = String(o); cardEl.style.transform = `translateY(${(1 - o) * -10}px)`; setHTML($('cardT'), typo(card.title)); setPanel($('cardX'), typo(card.text)); }
   else cardEl.style.opacity = '0';
   // HUD
   const depth = Math.max(0, -tipY); const drilling = t >= T.drill[0] && t < T.drill[1]; const extracting = t >= T.extract[0] && t < T.extract[1];
@@ -522,7 +535,7 @@ function update(t) {
     el.style.opacity = String(ease(ramp(t, rg[0], rg[0] + half)) * (1 - ease(ramp(t, rg[1] - half, rg[1]))));
   }
   // közelkép felirat
-  setText($('insT'), ins.title); setHTML($('insS'), typo(ins.sub));
+  setText($('insT'), ins.title); setPanel($('insS'), typo(ins.sub));
   $('inset').className = ins.bad ? 'bad' : (ins.good ? 'good' : '');
   // címkártya, zárókártya, haladás
   $('titlecard').style.opacity = String(1 - ease(ramp(t, 4.5, 6)));
@@ -553,7 +566,17 @@ function render(t) {
 }
 
 window.__duration = DUR;
-window.__setTime = (t) => { render(t); };
+window.__setTime = (t) => { lastT = t; render(t); };
 await document.fonts.ready;
+// magyar elválasztó: a kész jelzés (__ready, videórenderelés) előtt megvárjuk, legfeljebb 4 s-ig
+try {
+  const H = window.Hyphenopoly;
+  if (H && H.hyphenators && H.hyphenators.hu) HY = await Promise.race([H.hyphenators.hu.catch(() => null), new Promise((r) => setTimeout(() => r(null), 4000))]);
+} catch (e) { console.error('Elválasztás', e); HY = null; }
+if (HY) {
+  document.querySelectorAll('#endcard li, #hudfoot').forEach((el) => { el.innerHTML = hy(el.innerHTML).trim(); ragFit(el); });
+  // az összefoglaló kártyán egységes igazítás: ha egy pont balra zárt (keskeny hasáb), minden pont az
+  if (document.querySelector('#endcard li.rag')) document.querySelectorAll('#endcard li').forEach((li) => li.classList.add('rag'));
+}
 render(0);
 window.__ready = true;

@@ -54,25 +54,25 @@ canvas#c{position:absolute;left:0;top:0;width:1920px;height:1080px}
 #hud .chart .cl{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:2px}
 #hud .chart .cl b{color:var(--text);font-weight:600}
 #hud svg{display:block;width:100%;height:150px}
-#hud .foot{margin-top:8px;font-size:11px;color:var(--muted)}
+#hud .foot{margin-top:8px;font-size:11px;color:var(--muted);text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 /* ---- közelkép ---- */
 #inset{position:absolute;right:40px;bottom:170px;width:560px;height:400px;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,0.35);overflow:hidden}
 #inset .bar{position:absolute;left:0;right:0;top:0;padding:10px 16px;background:linear-gradient(rgba(8,12,20,0.85),rgba(8,12,20,0));display:flex;align-items:baseline;gap:12px}
 #inset .bar .k{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent2);font-weight:700}
 #inset .bar .t{font-size:18px;font-weight:700}
-#inset .sub{position:absolute;left:0;right:0;bottom:0;padding:12px 16px;background:linear-gradient(rgba(8,12,20,0),rgba(8,12,20,0.85));font-size:15px;color:var(--text)}
+#inset .sub{position:absolute;left:0;right:0;bottom:0;padding:12px 16px;background:linear-gradient(rgba(8,12,20,0),rgba(8,12,20,0.85));font-size:15px;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 #inset.bad{border-color:rgba(255,107,107,0.8);box-shadow:0 0 0 3px rgba(255,107,107,0.35),0 10px 40px rgba(0,0,0,0.35)} #inset.bad .bar .t{color:#ff7b7b} #inset.bad .sub{color:#ffd0d0}
 #inset.good{border-color:rgba(110,231,160,0.8);box-shadow:0 0 0 3px rgba(110,231,160,0.3),0 10px 40px rgba(0,0,0,0.35)} #inset.good .bar .t{color:#8ff0b8}
 /* ---- felirat ---- */
 #caption{position:absolute;left:40px;right:640px;bottom:46px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px 18px;backdrop-filter:blur(10px)}
 #caption .ph{font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:6px}
-#caption .tx{font-size:26px;font-weight:500;line-height:1.3;text-wrap:pretty;hyphens:none}
+#caption .tx{font-size:26px;font-weight:500;line-height:1.3;text-wrap:pretty;text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 #caption .tx b{font-weight:700;color:#fff}
 /* ---- „Miért fontos?” kártya ---- */
 #card{position:absolute;right:40px;top:118px;width:560px;background:rgba(36,20,6,0.86);border:1px solid rgba(255,179,71,0.45);border-left:6px solid var(--accent);border-radius:14px;padding:14px 18px 16px;backdrop-filter:blur(10px);opacity:0;transform:translateY(-8px)}
 #card .k{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:4px}
 #card .t{font-size:20px;font-weight:700;margin-bottom:6px;text-wrap:balance}
-#card .x{font-size:16px;line-height:1.35;color:rgba(255,255,255,0.9);text-wrap:pretty;hyphens:none}
+#card .x{font-size:16px;line-height:1.35;color:rgba(255,255,255,0.9);text-wrap:pretty;text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 /* ---- 3D címkék ---- */
 .lbl{position:absolute;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:0;opacity:0}
 .lbl .b{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:15px;font-weight:600;white-space:nowrap;backdrop-filter:blur(6px)}
@@ -96,12 +96,16 @@ canvas#c{position:absolute;left:0;top:0;width:1920px;height:1080px}
 #endcard .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 #endcard h3{margin:0 0 8px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
 #endcard ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
-#endcard li{font-size:16px;line-height:1.3;padding-left:16px;position:relative;text-wrap:pretty;hyphens:none}
+#endcard li{font-size:16px;line-height:1.3;padding-left:16px;position:relative;text-wrap:pretty;text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
 #endcard li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--accent2)}
+/* lyukas sorkizárás helyett balra zárás (main.js ragFit) */
+#caption .tx.rag,#card .x.rag,#inset .sub.rag,#endcard li.rag,#hud .foot.rag{text-align:left}
 #endcard .src{margin-top:12px;font-size:12px;color:var(--muted)}
 /* magyar tipográfia */
 body{text-wrap:pretty} .nowrap{white-space:nowrap}
-</style></head>
+</style><script src="vendor/hyphenopoly/Hyphenopoly_Loader.js"></script>
+<script>Hyphenopoly.config({ require: { "hu": "FORCEHYPHENOPOLY" }, setup: { hide: "none", selectors: { ".hyphenate": { minWordLength: 6, compound: "auto" } } } });</script>
+</head>
 <body>
 <canvas id="c" width="1920" height="1080"></canvas>
 <div id="ui">
