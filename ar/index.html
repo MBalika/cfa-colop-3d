@@ -311,8 +311,10 @@ function setModel(key) {
     b.style.setProperty('--dot', 'var(' + col + ')'); const sp = document.createElement('span'); sp.className = 'p'; sp.textContent = t; b.appendChild(sp); mv.appendChild(b);
   });
   mv.setAttribute('ar-scale', M.scale); mv.setAttribute('min-camera-orbit', 'auto 8deg ' + M.minR); mv.removeAttribute('auto-rotate');
-  if (EMB) mv.removeAttribute('ios-src'); else mv.setAttribute('ios-src', M.ios);
-  mv.setAttribute('camera-orbit', M.orbit); mv.setAttribute('camera-target', 'auto auto auto'); mv.setAttribute('src', EMB ? EMB[key] : M.src);
+  // abszolút cím: az AR-nézők (iPhone: AR Gyorsnézet, Android: Scene Viewer) az oldal címéhez, nem a <base> elemhez viszonyítanak
+  const abs = (u) => new URL(u, document.baseURI).href;
+  if (EMB) mv.removeAttribute('ios-src'); else mv.setAttribute('ios-src', abs(M.ios));
+  mv.setAttribute('camera-orbit', M.orbit); mv.setAttribute('camera-target', 'auto auto auto'); mv.setAttribute('src', EMB ? EMB[key] : abs(M.src));
   $('#views').innerHTML = M.views.map(([t], i) => `<button type="button" data-i="${i}" aria-pressed="${i === 0}">${t}</button>`).join('') + '<button type="button" data-i="rot" aria-pressed="false">Körbeforgatás</button>';
   $('#scaleTag').textContent = M.tag;
   $('#infoText').textContent = M.info;
