@@ -68,8 +68,8 @@ h1{font:800 clamp(30px, 5.2vw, 58px)/1.04 var(--fd); letter-spacing:-.02em; marg
 h1 em{font-style:normal; color:var(--accent)}
 .lead{color:var(--nink); opacity:.9; font-size:clamp(16px, 1.7vw, 18.5px); margin:14px 0 0}
 .grid{display:grid; grid-template-columns:minmax(0, 1.55fr) minmax(0, 1fr); gap:22px; margin-top:26px; align-items:stretch}
-.viewer{position:relative; border-radius:22px; overflow:hidden; border:1px solid var(--nline); background:radial-gradient(90% 80% at 50% 35%, #233142 0%, #121a23 70%, #0e141b 100%); min-height:560px}
-model-viewer{width:100%; height:100%; min-height:560px; display:block; --poster-color:transparent; --progress-bar-color:var(--accent); background:transparent}
+.viewer{position:relative; border-radius:22px; overflow:hidden; border:1px solid var(--nline); background:radial-gradient(90% 80% at 50% 35%, #233142 0%, #121a23 70%, #0e141b 100%); min-height:500px}
+model-viewer{width:100%; height:100%; min-height:500px; display:block; --poster-color:transparent; --progress-bar-color:var(--accent); background:transparent}
 /* a model-viewer a felirat elemét a pontra középre teszi: a gomb nulla méretű horgony, a látható címke benne helyezkedik el */
 .hs{position:relative; width:0; height:0; padding:0; border:0; background:none; pointer-events:none; transition:opacity .2s}
 .hs .p{position:absolute; left:0; top:0; display:block; white-space:nowrap; padding:4px 9px 4px 20px; border-radius:999px; background:rgba(12,16,21,.78); color:#f3efe6; font:600 12px/1.2 var(--fb); box-shadow:0 2px 10px rgba(0,0,0,.3); transform:translate(-8px, -50%)}
@@ -187,13 +187,6 @@ footer p{margin:0}
       </div>
 
       <div class="panel">
-        <div class="box">
-          <h2>Modell</h2>
-          <div class="seg" role="group" aria-label="Modell kiválasztása">
-            <button type="button" id="b-makett" aria-pressed="true"><b>Asztali makett</b><span>metszet · M 1 : 60</span></button>
-            <button type="button" id="b-gep" aria-pressed="false"><b>Valós méret</b><span>a gép · M 1 : 1</span></button>
-          </div>
-        </div>
         <div class="box info">
           <p id="infoText"></p>
           <div class="views" id="views" role="group" aria-label="Nézőpontok"></div>
@@ -270,7 +263,7 @@ const MODELS = {
   makett: {
     src: 'cfa-makett.glb', ios: 'cfa-makett.usdz', scale: 'auto', k: S60, orbit: '28deg 74deg auto', tag: 'M 1 : 60', minR: '0.06m',
     views: [['Áttekintés', '28deg 74deg auto', 'auto auto auto'], ['Metszet szemből', '0deg 88deg 0.95m', '0m 0.04m 0m'], ['Fúrófej közelről', '6deg 86deg 0.2m', '0m -0.158m 0m'], ['A fülke', '-62deg 78deg 0.2m', '-0.023m 0.06m -0.097m']],
-    info: 'Fúrás közben: a spirál 10 m mélyen jár, a menetei tele vannak talajjal. A makett kb. 79 cm magas, a felületre téve két ujjal kisebbre vagy nagyobbra állítható.',
+    info: 'Fúrás közben: a spirál 10 m mélyen jár, a menetei tele vannak talajjal. Ez a talaj támasztja meg a furat falát, ezért nem kell béléscső vagy zagy. A betont tömlő hozza a forgatófejig, onnan a spirál üreges szárán jut le a talpig. A makett kb. 79 cm magas, a felületre téve két ujjal kisebbre vagy nagyobbra állítható.',
     facts: [['10 m', 'fúrásmélység'], ['79 cm', 'makettmagasság'], ['1 : 60', 'lépték']],
     hs: [
       ['Forgatófej', [0, 11.5, 0.1], [0, 0, 1], 0, '--accent'],
@@ -283,20 +276,6 @@ const MODELS = {
       ['Iszapos homok', [-4.7, -8.75, 0.05], [0, 0, 1], 2, '--l3'],
       ['Homok', [-4.7, -14.25, 0.05], [0, 0, 1], 2, '--l4'],
       ['Kavics', [-4.7, -18.85, 0.05], [0, 0, 1], 2, '--l5'],
-    ],
-  },
-  gep: {
-    src: 'cfa-gep-valos-meret.glb', ios: 'cfa-gep-valos-meret.usdz', scale: 'fixed', k: 1, orbit: '38deg 78deg auto', tag: 'M 1 : 1', minR: '2m',
-    views: [['Teljes gép', '38deg 78deg auto', 'auto auto auto'], ['Forgatófej', '24deg 84deg 17m', '0m 21.5m -0.6m'], ['Az ember szemével', '32deg 99deg 24m', '-1m 12m -1m'], ['A fülke', '-62deg 78deg 10m', '-1.4m 3.4m -5.8m']],
-    info: 'A fúrógép valós méretben, felhúzott spirállal és betonszivattyúval. Az árboc kb. 27 m magas: tágas helyen, udvaron vagy sportpályán érdemes kipróbálni, és jócskán hátrálni kell, hogy beleférjen a képbe.',
-    facts: [['27 m', 'árbocmagasság'], ['20 m', 'spirálhossz'], ['1,8 m', 'ember mellette']],
-    hs: [
-      ['Árbocfej', [0, 27.3, -0.35], [0, 0, 1], 0, '--accent'],
-      ['Forgatófej', [0, 22.1, 0.1], [0, 0, 1], 0, '--accent'],
-      ['Spirál, 20 m', [0.42, 11, 0.05], [0, 0, 1], 0, '--accent'],
-      ['Gépkezelő a fülkében', [-2.16, 3.7, -5.9], [-1, 0, 0], 1, '--accent'],
-      ['Betonszivattyú', [-7.6, 1.8, -12.6], [-1, 0, 0], 1, '--accent'],
-      ['Ember, 1,8 m', [-3.6, 1.9, 0.8], [0, 0, 1], 1, '--accent'],
     ],
   },
 };
@@ -321,15 +300,12 @@ function setModel(key) {
   $('#facts').innerHTML = M.facts.map(([v, l]) => `<div class="fact"><b>${v}</b><span>${l}</span></div>`).join('');
   try { localStorage.setItem('cfa-ar-model', key); } catch (e) {}
 }
-$('#b-makett').addEventListener('click', () => setModel('makett'));
-$('#b-gep').addEventListener('click', () => setModel('gep'));
 $('#views').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const M = MODELS[cur];
   if (b.dataset.i === 'rot') { const on = !mv.hasAttribute('auto-rotate'); mv.toggleAttribute('auto-rotate', on); b.setAttribute('aria-pressed', String(on)); return; }
   const [, o, t] = M.views[+b.dataset.i]; mv.cameraTarget = t; mv.cameraOrbit = o; $$('#views button').forEach(x => { if (x.dataset.i !== 'rot') x.setAttribute('aria-pressed', String(x === b)); }); });
 mv.addEventListener('camera-change', e => { if (e.detail.source === 'user-interaction') $$('#views button').forEach(x => { if (x.dataset.i !== 'rot' && x.getAttribute('aria-pressed') !== 'false') x.setAttribute('aria-pressed', 'false'); }); });
 $('#lbl').addEventListener('change', e => $('#viewer').classList.toggle('nolabels', !e.target.checked));
-let saved = 'makett'; try { saved = localStorage.getItem('cfa-ar-model') || 'makett'; } catch (e) {}
-setModel(MODELS[saved] ? saved : 'makett');
+setModel('makett');
 
 // AR-állapot: van-e AR ezen az eszközön
 let qrDone = false;
