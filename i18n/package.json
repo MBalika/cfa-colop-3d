@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "description": "Az angol változat (en.html) fordítóeszközei",
+  "dependencies": {
+    "acorn": "^8.14.0",
+    "acorn-walk": "^8.3.4",
+    "parse5": "^7.1.2"
+  }
+}

@@ -1,0 +1,94 @@
+# az app saját szövegei (index.html, js/main.js, js/machines.js, js/player.js, ar/index.html)
+da0c087	CFA pile – construction process in 3D
+1832f6f	Foundation engineering · Deep foundations · Piles
+7787e28	CFA pile <span class="s">continuous flight auger pile</span>
+80bbb7a	On-board computer · CFA monitoring
+ee9cf36	<span class="dot"></span><span id="hudst">STANDBY</span>
+83d7917	<span>Real time</span> <b id="hRt">0:00:00</b> <span class="sp">· video ≈ 13× speed</span>
+663e3e4	=
+bee4f91	=
+7416ff3	<span id="hRate">0.0</span><small>m/min</small>
+d0ec3fb	<span id="hPress">0.0</span><small>bar</small>
+158487f	<span><b>Conc. m³/m</b> by depth</span><span>theoretical <b id="hTheo">0.50</b> m³/m · excess <b id="hOver">–</b></span>
+a2187a7	Why it matters
+9b2e543	<span class="k">Close-up</span><span class="t" id="insT"></span>
+a3b0b1e	Accelerated technical illustration · the soil and the pile shown in a vertical section through the axis
+e4dc717	CFA pile
+700e911	Making a continuous flight auger (CFA) pile, from positioning the rig to the finished pile
+02501ea	Deep foundations › Piles › Replacement (bored) pile › Partial displacement › Continuous flight auger (CFA)
+1a2195a	3D technical animation · accelerated · in section
+c040648	Gravel (bearing stratum)
+a29a5e0	Set-out pile axis
+9455401	Rotary head on the leader
+76ac163	Hollow-stem auger
+6c5a9b7	Concrete pump
+8b9cfd5	Concrete hose to the auger
+dc2ca2d	Fresh concrete under pressure, with the concrete head above the toe
+a1d7b34	Excavator: clearing the spoil
+4f81558	Reinforcement cage with spacers
+5a4c8f1	Vibrator
+73740d2	Starter bars
+742bf75	Pile cap
+0fea071	The rotary head turns the hollow-stem auger and pushes it down to the design depth. <b>The spoil is not removed:</b> the soil held on the flights supports the bore wall all the way.
+e95c27f	No casing or bentonite slurry is needed, and groundwater is no problem. The bottom of the stem is closed by a flap (in practice a sacrificial plug), so no soil or water gets into the hollow stem.
+b351c9d	At the design depth the auger is lifted 15–30 cm and the pump forces concrete <b>down the hollow stem</b>: the pressure opens the flap (blows out the plug) and the concrete emerges below the auger.
+e7ccef9	The auger is withdrawn <b>under concrete pressure</b>, without rotation or turning very slowly: the concrete fills the bore below the toe, the auger brings up the soil and the auger cleaner strips it off.
+a9b1618	The on-board computer records the concrete pressure at the top of the auger and the concrete volume for every metre (theoretical + 15–20 %). The pile is concreted up to working level, without vibration.
+edef41a	The pile has been concreted up to working level. The excavator clears the spoil around the fresh pile head, and the rig moves straight on to the next pile: one rig makes 15–30 piles a day.
+c2d4ab4	Straight after concreting the crane lowers the reinforcement cage into the still fresh, fluid concrete. The spacers ensure the concrete cover.
+e801e9f	Down to 6–10 m the cage sinks under its own weight; deeper it is helped by a vibrator. The longitudinal bars project above the concrete for the later connection.
+603f93a	Time jump: the concrete has hardened. The pile head is cut down to the design level, the starter bars are left exposed, and then the pile cap is built.
+04aa780	The finished CFA pile: a solid concrete shaft socketed into the bearing stratum, reinforced at the top. A fast, quiet, low-vibration technique, with no casing or slurry.
+a8d80fe	<h2>CFA pile – summary</h2><div class="cols"><div><h3>Field of application</h3><ul>⏎<li>in any soil except loose, flowing soils; particular care in fine sand</li>⏎<li>on projects needing many pile diameters and lengths</li>⏎<li>for varying load demands and tight deadlines</li>⏎<li>where noise and vibration are restricted (urban sites)</li></ul></div>⏎<div><h3>Main features</h3><ul>⏎<li>40–60–80–100–(120) cm diameter</li>⏎<li>6–22 (24) m long</li>⏎<li>simple plant, no casing or slurry</li>⏎<li>automatic monitoring (pressure, volume, depth)</li>⏎<li>fast drilling</li></ul></div></div>
+01c93d1	The auger tip above the set-out axis
+aa3d9ef	The soil on the flights supports the bore wall; a flap (sacrificial plug) closes the bottom of the stem
+24886ed	Starting the concrete at the toe
+e4ff3f2	The concrete arrives through the hollow stem; the pressure blows out the plug
+4d22e5e	Spoil and pile head
+0af8c99	The soil is cleared around the fresh concrete head
+855e7a7	Cutting down the pile head
+6703e55	The excess concrete is broken out; the starter bars project
+c3a5aa1	Section of the finished pile
+50436c2	Concrete and reinforcement socketed into the bearing stratum
+945935c	<text x="${L + 3}" y="${yT - 3}" fill="#ffb347" font-size="10" text-anchor="start" font-family="Mono">theoretical 0.50 m³/m</text>
+5be1e7b	Hyphenation
+19b48f2	<button id="pp">▶ Play</button><span class="t" id="tm">0:00 / 0:00</span><input type="range" id="sc" min="0" max="1000" value="0"><div class="ph" id="phs"></div>
+888b645	=
+4276ada	CFA pile in space
+a28100f	=
+0075f53	The CFA rig and a section of the ground in augmented reality: a 3D model you can place on a table or the floor with your phone and walk around.
+8f35ae0	CFA pile <em>in&nbsp;space</em>
+4483a1e	The CFA rig and a section of the ground as a 3D model. On a phone, the “View in your space” button lets you place it on a table or the floor, walk around it and zoom in. On a computer you can rotate it with the mouse.
+3c2a725	CFA rig during drilling, with a section through the soil layers
+d3aab84	How to place the&nbsp;model
+9c5dbed	The model is placed on the surface. You can rotate and zoom it with two fingers, but it is best to walk around it and look into the section close up.
+1b5c633	What do you see in the&nbsp;section?
+4858d5e	<span class="sw" style="background:var(--l1)"></span><span class="nm">Fill</span><span class="d">0–1.5 m</span>
+0807513	<span class="sw" style="background:var(--l2)"></span><span class="nm">Clay</span><span class="d">1.5–6.5 m</span>
+599844d	<span class="sw"></span><span class="nm">Groundwater table</span><span class="d">−4.2 m</span>
+fd9e89f	<span class="sw" style="background:var(--l3)"></span><span class="nm">Silty sand</span><span class="d">6.5–11.0 m</span>
+498a060	<span class="sw" style="background:var(--l4)"></span><span class="nm">Sand</span><span class="d">11.0–17.5 m</span>
+1fafb78	<span class="sw" style="background:var(--l5)"></span><span class="nm">Gravel</span><span class="d">below 17.5 m</span>
+520bec0	During drilling, 10 m deep
+8ba2d4e	The section cuts through the axis of the bore, so the front half of the auger is visible in the soil. The flights are full of soil: this soil supports the bore wall, which is why a CFA pile needs no casing or slurry. The auger brings the soil up as it is withdrawn, while concrete fills the bore from below.
+961dcfa	While drilling, the auger turns clockwise seen from above. The rig is controlled by the operator in the cab. The concrete is brought to the rotary head by a hose, and from there it goes down the hollow stem of the auger to the toe.
+e432791	<b>80 cm</b><span>pile diameter</span>
+b67949e	<b>16 m</b><span>pile length</span>
+bf16c5d	<b>20 m</b><span>auger length</span>
+c5bde90	You need a phone that runs Google Play Services for AR. The model opens in Google Scene Viewer, where the auger keeps turning.
+981e379	Open the page in Safari. The model appears in Apple AR Quick Look. Here the auger does not turn; the model is a still.
+83f3bc2	A desktop computer has no camera AR; you can rotate the model with the mouse and zoom with the wheel. For the view in your space, open the page on your phone.
+f06dd2b	Deep foundations course material
+72547a9	BME Department of Engineering Geology and Geotechnics · Foundation Engineering
+f509185	The cab
+7158a01	During drilling: the auger is 10 m deep and its flights are full of soil. This soil supports the bore wall, so no casing or slurry is needed. The concrete is brought to the rotary head by a hose, and from there it goes down the hollow stem of the auger to the toe. The model is about 79 cm tall; once placed, you can make it smaller or larger with two fingers.
+3bd4ebc	model height
+1266516	scale
+4ca4720	This device supports AR. Tap the “View in your space” button below the model.
+fc47afe	This is a preview: you can rotate and zoom the model. For camera AR, open the page at its own web address on your phone.
+22b5ca1!	(^|[\\s(\u00A0\u2060“])(a|an|A|An|the|The|e\\.g\\.|i\\.e\\.|approx\\.|\\d+(?:[.]\\d+)?%?) $
+bb5d388	=
+a23fb86	=
+e9b672f	<span class="n">8</span><span>Deep foundations</span><span class="tag">AR test</span>⏎    <a class="langbtn" id="langSw" href="./" hreflang="hu" lang="hu" aria-label="Magyar változat"><span>HU</span><b>EN</b></a>
+2e49be5	The crawler rig moves over the set-out pile axis. The rig’s inclinometer checks that the mast is vertical, and the auger tip is placed on the set-out point.
+8115959	Concrete start

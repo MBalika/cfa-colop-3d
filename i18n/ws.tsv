@@ -1,0 +1,233 @@
+1027e1a	~en/
+da0c087	CFA cölöp – készítési folyamat 3D
+1832f6f	Alapozás · Mélyalapozások · Cölöpalapozás
+7787e28	CFA cölöp <span class="s">folyamatos spirálfúrású cölöp készítése</span>
+80bbb7a	Fedélzeti számítógép · CFA monitoring
+ee9cf36	<span class="dot"></span><span id="hudst">KÉSZENLÉT</span>
+83d7917	<span>Valós idő</span> <b id="hRt">0:00:00</b> <span class="sp">· a videó ≈ 13× gyorsított</span>
+eb7fa9f	Mélység
+82b2f7a	Fordulatszám
+663e3e4	<span id="hRpm">0</span><small>1/min</small>
+60d4b15	Nyomaték
+bee4f91	<span id="hTorque">0</span><small>kNm</small>
+da6da91	Előtolás
+7416ff3	<span id="hRate">0,0</span><small>m/min</small>
+b76a6af	Betonnyomás
+d0ec3fb	<span id="hPress">0,0</span><small>bar</small>
+39c65a1	Betonmennyiség
+158487f	<span><b>Beton m³/m</b> mélység szerint</span><span>elméleti <b id="hTheo">0,50</b> m³/m · többlet <b id="hOver">–</b></span>
+c111103	A gép a mélységet, a fordulatot, a nyomatékot, a fúrószár tetején (hattyúnyakon) mért betonnyomást és a betonmennyiséget méterenként rögzíti.
+a2187a7	Miért fontos?
+9b2e543	<span class="k">Közelről</span><span class="t" id="insT"></span>
+a3b0b1e	Gyorsított technológiai szemléltetés · a talaj és a cölöp a tengelyen átmenő függőleges metszetben látható
+e4dc717	CFA cölöp
+700e911	Folyamatos spirálfúrású (Continuous Flight Auger) cölöp készítése a pontraállástól a kész cölöpig
+02501ea	Mélyalapozások › Cölöpök › Talajhelyettesítéses (fúrt) cölöp › Részleges talajkiszorítás › Folyamatos spirál (CFA)
+1a2195a	3D technológiai animáció · gyorsított · metszetben
+4d3950e	~js/player.js
+f573563	~\u00AD
+0b8cef8	Pontraállás
+f8d3e82	Fúrás
+8115959	Betonindítás
+f9d4891	Kihúzás + betonozás
+8e89732	Furadék
+39eff75	Vasalás
+ab44964	Fejkialakítás
+71877e1	Kész cölöp
+4d2677c	Feltöltés
+936752f	~Agyag
+27dca9f	~Iszapos homok
+3e73d08	~Homok
+bca7414	~Kavics
+c040648	Kavics (teherbíró réteg)
+a29a5e0	Kitűzött cölöptengely
+9455401	Forgatófej a vezetősínen
+76ac163	Üreges szárú spirálfúró
+e8f0d70	Talajvíz
+6c5a9b7	Betonszivattyú
+7f45fc5	~Mixer
+8b9cfd5	Betontömlő a fúrószárhoz
+7ffca3a	Spiráltisztító
+dc2ca2d	Friss beton nyomás alatt, a talp fölé érő betonfejjel
+a1d7b34	Kotró: furadék eltávolítása
+4f81558	Betonacél armatúra távtartókkal
+5a4c8f1	Vibrátor
+73740d2	Csatlakozó vasak
+742bf75	Cölöpösszefogó fejtömb
+03a776d	1 · Kitűzés, pontraállás
+2e49be5	A lánctalpas fúrógép a kitűzött cölöptengely fölé áll. Az árboc függőlegességét a gép dőlésmérője ellenőrzi, a spirál hegye a kitűzési pontra kerül.
+ce37830	2 · Megadott hosszúságú furat készítése
+0fea071	Az üreges szárú spirálfúrót a forgatófej forgatja és nyomja lefelé a tervezett mélységig. <b>A furadék nem kerül ki:</b> a spirálon maradó talajdugó folyamatosan megtámasztja a furat falát.
+e95c27f	Nincs szükség béléscsőre vagy bentonitos zagyra, a talajvíz sem zavar. A szár alját csapóajtós vég (a gyakorlatban eldobható záródugó) zárja, hogy talaj és víz ne jusson az üreges szárba.
+2dcafc7	3 · Betonozás: a talp elérése, betonindítás
+b351c9d	A tervezett mélységen a spirált 15–30 cm-rel megemelik, a szivattyú <b>az üreges száron át</b> betont nyom le: a nyomás kinyitja a csapóajtós véget (kilöki a záródugót), a beton a spirál alatt lép ki.
+886d0bb	4 · Betonozás a fúrószáron keresztül, felhúzás közben
+e7ccef9	A spirált <b>betonnyomás alatt</b>, forgatás nélkül vagy nagyon lassan forgatva húzzák ki: a beton a talp alatt tölti ki a furatot, a spirál a talajt hozza fel, a spiráltisztító lekaparja.
+a9b1618	A fedélzeti számítógép méterenként rögzíti a fúrószár tetején mért betonnyomást és a betonmennyiséget (elméleti + 15–20 %). A cölöpöt a munkaszintig felbetonozzák, vibrálás nélkül.
+73fc221	5 · Felbetonozás a munkaszintig, furadék eltakarítása
+edef41a	A cölöpöt a munkaszintig felbetonozták. A kotró eltakarítja a furadékot a friss cölöpfej körül, a fúrógép pedig azonnal továbbáll a következő cölöphöz: egy géppel napi 15–30 cölöp készül.
+7b4165f	6 · A cölöpvasalás elhelyezése
+c2d4ab4	Közvetlenül a betonozás után a daru a betonacél armatúrát (vasalókosarat) a még friss, folyós betonba engedi. A távtartók biztosítják a betontakarást.
+e801e9f	Az armatúra 6–10 m-ig saját súlyával süllyed, mélyebbre vibrátorral segítik. A hosszvasak a betonszint fölé nyúlnak a későbbi csatlakozáshoz.
+36218b2	7 · Fejkialakítás · időugrás: néhány nap múlva
+603f93a	Időugrás: a beton megszilárdult. A cölöpfejet a tervezett szintre visszavésik, a csatlakozó vasak szabadon maradnak, majd elkészül a cölöpösszefogó fejtömb.
+4d48fa0	8 · Kész cölöp
+04aa780	A kész CFA cölöp: tömör betontest a teherbíró rétegbe kötve, felül vasalva. Gyors, csendes, rezgésszegény technológia, béléscső és zagy nélkül.
+69d349a	Túlfúrás laza homokban
+fb8c695	Ha a spirál túl gyorsan forog az előtoláshoz képest, több talajt szállít fel, mint amennyit kifúr: a furat környezete fellazul. Ezért a fordulat és az előtolás arányát a gép méri és szabályozza.
+1335b4e	Kihúzási sebesség és betonszállítás
+4876d06	A spirált csak olyan gyorsan szabad emelni, amennyi betont a szivattyú betölt, hogy a betonfej a spirálcsúcs fölött maradjon. Ha gyorsabban húzzák, a nyomás leesik, a furatfal beomlik, és a cölöptest beszűkül (necking).
+0a2be3a	Miért kell friss, folyós beton?
+e6b8a78	A kosarat a betonozás után azonnal be kell helyezni: a folyós konzisztencia és a kötéskésleltető teszi lehetővé, hogy a kosár saját súlyával lesüllyedjen.
+a8d80fe	<h2>CFA cölöp – összefoglaló</h2><div class="cols"><div><h3>Alkalmazási terület</h3><ul>⏎<li>minden talajban, kivéve a laza, folyós talajokat; finom homokban különös gondosság</li>⏎<li>sokféle cölöpátmérőt és -hosszat igénylő projekteken</li>⏎<li>változékony teherbírási igény, rövid határidő esetén</li>⏎<li>zaj- és rezgéskorlátozás esetén (városi környezet)</li></ul></div>⏎<div><h3>Főbb jellemzők</h3><ul>⏎<li>40–60–80–100–(120) cm átmérő</li>⏎<li>6–22 (24) m hossz</li>⏎<li>egyszerű gépészet, béléscső és zagy nélkül</li>⏎<li>automata monitorozás (nyomás, mennyiség, mélység)</li>⏎<li>gyors fúrási sebesség</li></ul></div></div>
+db0d360	Kitűzés
+01c93d1	A spirál hegye a kitűzött tengely fölött
+d9fad09	A talp és a talajdugó
+aa3d9ef	A spirálon maradó talaj támasztja a furat falát; a szár alját csapóajtós vég (záródugó) zárja
+24886ed	Betonindítás a talpnál
+e4ff3f2	A beton az üreges száron át érkezik, a nyomás kilöki a záródugót
+3bfbf19	Kihúzás betonnyomás alatt
+0dc5efc	A talp alatt friss beton tölti ki a furatot, a betonfej a csúcs fölé ér
+b159f61	HELYES: nyomás alatti kihúzás
+74a3258	A betonfej a spirálcsúcs fölött áll (≥ 1,5 m), a nyomás végig pozitív (≈ 0,9 bar)
+55110b8	HIBÁS: túl gyors kihúzás
+8654722	Nyomás 0,0 bar: a talp alatt üreg, a furatfal beomlik – a cölöptest beszűkül (necking)
+67f5d11	A felszínre érő spirálról a kaparó lekaparja a furadékot
+4d22e5e	Furadék és cölöpfej
+0af8c99	A friss betonfej körül a talajt eltávolítják
+78d716c	Betonacél armatúra
+10fd34f	Hosszvasak, spirálkengyel és távtartó kerekek a betontakaráshoz
+855e7a7	Cölöpfej visszavésése
+6703e55	A beton fölös részét lebontják, a csatlakozó vasak kiállnak
+c3a5aa1	Kész cölöp metszete
+50436c2	Beton és vasalás a teherbíró rétegbe kötve
+945935c	<text x="${L + 3}" y="${yT - 3}" fill="#ffb347" font-size="10" text-anchor="start" font-family="Mono">elméleti 0,50 m³/m</text>
+8605003	~tab 
+d951fc7	~capPh
+767f26a	~capTx
+b3218c4	~cardT
+ee04bb6	~cardX
+4c89095	~hDepth
+34069fc	~hRpm
+f9b6363	~hTorque
+2b85927	~hRateL
+b8e58e2	Kihúzás
+6de01b1	~hRate
+6c97b4e	~hPress
+6607f04	~hVol
+2ddbea1	~hTheo
+bcbbb31	~hRt
+e7463be	~+ 2 nap
+c881d4b	~hOver
+868e0b7	ÁRBOC DŐLÉSE 
+4e130f4	KÉSZENLÉT
+3f02999	FÚRÁS · 
+34b69cc	~ ford./menet
+9d0f18b	BETONINDÍTÁS
+1659107	KIHÚZÁS + BETONOZÁS
+a2502ed	CÖLÖPNAPLÓ LEZÁRVA
+9fe3187	~insT
+fa48b00	~insS
+5be1e7b	Elválasztás
+19b48f2	<button id="pp">▶ Lejátszás</button><span class="t" id="tm">0:00 / 0:00</span><input type="range" id="sc" min="0" max="1000" value="0"><div class="ph" id="phs"></div>
+bb5d388	<a class="lang" id="lang" href="../" hreflang="hu" lang="hu" aria-label="Magyar változat"><span>HU</span><b>EN</b></a>
+af53b93	~<a class="lang" id="lang" href="en/" hreflang="en" lang="en" aria-label="English version"><b>HU</b><span>EN</span></a>
+4e7dd28	~scale(${s})
+43fbe9c	↺ Újra
+dca1c67	▶ Lejátszás
+1670812	❚❚ Szünet
+6d8c9b1	~Space
+c5d27b0	~ArrowRight
+55cfd14	~ArrowLeft
+888b645	width=device-width, initial-scale=1, viewport-fit=cover
+4276ada	CFA-cölöp a térben
+a28100f	cover
+0075f53	A CFA-fúrógép és a talaj metszete kiterjesztett valóságban: telefonon az asztalra vagy a padlóra tehető, körbejárható 3D-modell.
+e9b672f	<span class="n">8</span><span>Mélyalapozások</span><span class="tag">AR-teszt</span>⏎    <a class="langbtn" id="langSw" href="en/" hreflang="en" lang="en" aria-label="English version"><b>HU</b><span>EN</span></a>
+a23fb86	English version
+8f35ae0	CFA-cölöp <em>a&nbsp;térben</em>
+4483a1e	A CFA-fúrógép és a talaj metszete háromdimenziós modellként. Telefonon a „Nézd meg a térben” gombbal az asztalra vagy a padlóra teheted, körbejárhatod és nagyíthatod. Számítógépen egérrel forgatható.
+3c2a725	CFA-fúrógép fúrás közben, a talajrétegek metszetével
+be60268	Nézd meg a térben
+7e30f62	Nézőpontok
+353c8a0	Feliratok a modellen
+cb086fc	<span class="dot"></span><span id="statusText">Az AR-támogatás ellenőrzése…</span>
+6ffb634	QR-kód az oldal megnyitásához telefonon
+d3aab84	Így teheted le a&nbsp;modellt
+0f916dc	Koppints a gombra
+d7ed3b8	A modell alatti „Nézd meg a térben” gomb megnyitja a kamerát. Első alkalommal a telefon engedélyt kér hozzá.
+45d787d	Pásztázd a felületet
+a34ee31	Lassan mozgasd a telefont a padló vagy az asztal fölött, amíg felismeri a vízszintes felületet. Jól megvilágított, mintás felületen gyorsabb.
+8307010	Tedd le és járd körbe
+9c5dbed	A modell a felületre kerül. Két ujjal forgathatod és nagyíthatod, de a legjobb, ha körbesétálod, és közelről belenézel a metszetbe.
+1b5c633	Mit látsz a&nbsp;metszetben?
+4858d5e	<span class="sw" style="background:var(--l1)"></span><span class="nm">Feltöltés</span><span class="d">0–1,5 m</span>
+0807513	<span class="sw" style="background:var(--l2)"></span><span class="nm">Agyag</span><span class="d">1,5–6,5 m</span>
+599844d	<span class="sw"></span><span class="nm">Talajvízszint</span><span class="d">−4,2 m</span>
+fd9e89f	<span class="sw" style="background:var(--l3)"></span><span class="nm">Iszapos homok</span><span class="d">6,5–11,0 m</span>
+498a060	<span class="sw" style="background:var(--l4)"></span><span class="nm">Homok</span><span class="d">11,0–17,5 m</span>
+1fafb78	<span class="sw" style="background:var(--l5)"></span><span class="nm">Kavics</span><span class="d">17,5 m alatt</span>
+520bec0	Fúrás közben, 10 m mélyen
+8ba2d4e	A metszet a furat tengelyén vág át, ezért a spirál elülső fele látszik a talajban. A menetek tele vannak talajjal: ez a talaj támasztja meg a furat falát, ezért a CFA-cölöpnél nem kell béléscső vagy zagy. A talajt a spirál a kihúzáskor hozza fel, miközben alulról beton tölti ki a furatot.
+961dcfa	Fúrás közben a spirál felülről nézve az óramutató járásával egyezően forog. A gépet a fülkében ülő gépkezelő irányítja. A betont tömlő hozza a forgatófejig, onnan a spirál üreges szárán jut le a talpig.
+e432791	<b>80 cm</b><span>cölöpátmérő</span>
+b67949e	<b>16 m</b><span>cölöphossz</span>
+bf16c5d	<b>20 m</b><span>spirálhossz</span>
+39c57a2	Ha nem indul az AR
+8b9621f	Androidon
+c5bde90	Olyan telefon kell, amelyen fut a Google Play-szolgáltatások AR-hez. A modell a Google Scene Viewer nézőjében nyílik meg, a spirál ott is forog.
+e2910d7	iPhone-on, iPaden
+981e379	Safariból nyisd meg az oldalt. A modell az Apple AR Gyorsnézetében jelenik meg. Itt a spirál nem forog, a modell állókép.
+8579a52	Számítógépen
+83f3bc2	Asztali gépen nincs kamerás AR, a modell egérrel forgatható és görgővel nagyítható. A térbeli nézethez nyisd meg az oldalt a telefonodon.
+b587a41	A teljes CFA-animáció
+f06dd2b	Mélyalapozások tananyag
+72547a9	BME Geotechnika és Mérnökgeológia Tanszék · Alapozás
+a0cf130	~langSw
+90beb0e	~cfa-makett.glb
+cf20aad	~cfa-makett.usdz
+52a02f8	~cfa-makett-feliratok.glb
+bd853fc	~cfa-makett-feliratok.usdz
+1ae75a2	~28deg 74deg auto
+c0daebc	Áttekintés
+0f4fd6a	~auto auto auto
+a1f43c6	Metszet szemből
+aca6b62	~0deg 88deg 0.95m
+fb46db3	Fúrófej közelről
+e1c03fb	~6deg 86deg 0.2m
+f509185	A fülke
+e4fb528	~-62deg 78deg 0.2m
+7158a01	Fúrás közben: a spirál 10 m mélyen jár, a menetei tele vannak talajjal. Ez a talaj támasztja meg a furat falát, ezért nem kell béléscső vagy zagy. A betont tömlő hozza a forgatófejig, onnan a spirál üreges szárán jut le a talpig. A makett kb. 79 cm magas, a felületre téve két ujjal kisebbre vagy nagyobbra állítható.
+e56f991	fúrásmélység
+8d6ae4e	~79 cm
+3bd4ebc	makettmagasság
+1266516	lépték
+0b01810	~auto 8deg 
+c9af337	<button type="button" data-i="rot" aria-pressed="false">Körbeforgatás</button>
+c062393	~${o.theta}rad ${o.phi}rad ${o.radius}m
+83ccf40	~status ok
+4ca4720	Ez az eszköz tudja az AR-t. Koppints a modell alatti „Nézd meg a térben” gombra.
+903dc00	~status no
+3357cd1	Ezen az eszközön nincs kamerás AR. Olvasd be a kódot a telefonoddal, és ott nyisd meg az oldalt.
+fc47afe	Ez az előnézet: a modell forgatható és nagyítható. A kamerás AR-hoz az oldalt önálló webcímen kell megnyitni a telefonon.
+4e272cf	Ezen az eszközön nincs kamerás AR. Nyisd meg ezt az oldalt a telefonodon, ott megjelenik a „Nézd meg a térben” gomb.
+1545aac	Az AR nem indult el ezen az eszközön. Próbáld meg Chrome-ban (Android) vagy Safariban (iPhone).
+66ae25c	talaj és szerkezet
+b38cd9d	teherbíró réteg
+28c8516	talajvíz-viszonyok
+0c6a6f3	egyenlőtlen süllyedés
+8fd7770	egyenlőtlen süllyedések
+cebb3a4	általános állékonyság
+ef38f08	teherbírási határállapot
+6adf3d4	használhatósági határállapot
+14c1494	~puha lencse
+4f1ac03	~szerves talaj
+966a4ff	~szerves agyag
+3e6a98b	roskadékony lösz
+e905a40	térfogatváltozó agyag
+48d1b0e	kút- és szekrényalapok
+1677a81	cölöppel gyámolított lemezalap
+9a690d6	mélyített síkalap
+ae49352	házi feladat
+4a37eb0	~pisai torony
+22b5ca1	(^|[\\s(\u00A0\u2060„])(a|az|A|Az|s|e|egy|Egy|és|És|pl\\.|kb\\.|ill\\.|ún\\.|\\d+(?:[,.]\\d+)?\\.?%?) $
